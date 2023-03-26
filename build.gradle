@@ -16,8 +16,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'io.micrometer:micrometer-tracing-bridge-otel'
-//    or brave?
-//    implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+    implementation 'io.opentelemetry:opentelemetry-exporter-zipkin'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
 }
