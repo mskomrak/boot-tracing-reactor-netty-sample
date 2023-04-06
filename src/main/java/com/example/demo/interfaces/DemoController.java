@@ -22,14 +22,12 @@ public class DemoController {
 
     @GetMapping
     public Mono<String> get() {
-        log.info("Getting data from controller");
         return this.demoCLient.fetchData()
                 .doOnNext(s -> log.info("Returning data from controller"));
     }
 
     @PostMapping
     public Mono<String> post() {
-        log.info("Submitting data from controller");
         return this.demoCLient.submitData()
                 .doOnNext(s -> log.info("Returning data from controller"));
     }
